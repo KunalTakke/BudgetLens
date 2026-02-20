@@ -1,1 +1,173 @@
-/* Kunal Juvvala */
+.budgets-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.budget-form-container {
+  margin-bottom: 20px;
+}
+
+.budget-form-container .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 15px;
+}
+
+.budget-form-container .form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.budget-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.budget-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.budget-card .budget-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.budget-card .budget-card-header h3 {
+  font-size: 1.1rem;
+  color: #2c3e50;
+}
+
+.budget-card .budget-card-header .month-label {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.budget-card .budget-amounts {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+.budget-card .spent {
+  font-weight: 600;
+}
+
+.budget-card .limit {
+  color: #888;
+}
+
+.budget-card .progress-bar {
+  height: 24px;
+  margin-bottom: 8px;
+}
+
+.budget-card .percentage {
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.percentage.good {
+  color: #27ae60;
+}
+
+.percentage.warning {
+  color: #f39c12;
+}
+
+.percentage.over {
+  color: #e74c3c;
+}
+
+.budget-card .budget-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.budget-card .budget-actions button {
+  padding: 5px 12px;
+  font-size: 0.8rem;
+}
+
+.budget-alert {
+  padding: 10px 15px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  font-size: 0.85rem;
+}
+
+.budget-alert.warning {
+  background-color: #fff3cd;
+  color: #856404;
+  border-left: 4px solid #ffc107;
+}
+
+.budget-alert.over {
+  background-color: #f8d7da;
+  color: #721c24;
+  border-left: 4px solid #e74c3c;
+}
+
+.alerts-section {
+  margin-bottom: 20px;
+}
+
+.alerts-section h2 {
+  margin-bottom: 10px;
+}
+
+.summary-section {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.summary-section h2 {
+  margin-bottom: 15px;
+}
+
+.summary-stats {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.summary-stat {
+  text-align: center;
+}
+
+.summary-stat .value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.summary-stat .label {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+@media (max-width: 768px) {
+  .budget-form-container .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .budget-cards {
+    grid-template-columns: 1fr;
+  }
+}

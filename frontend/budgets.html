@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BudgetLens - Budgets</title>
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/budget.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="/" class="logo">Budget<span>Lens</span></a>
+      <a href="/">Dashboard</a>
+      <a href="/expenses.html">Expenses</a>
+      <a href="/budgets.html" class="active">Budgets</a>
+    </nav>
+
+    <main>
+      <section class="budgets-header">
+        <h1>Budgets</h1>
+        <button class="primary" id="toggleFormBtn">+ Set Budget</button>
+      </section>
+
+      <section class="alerts-section" id="alertsSection">
+        <h2>Alerts</h2>
+        <div id="alertsList">
+
+        </div>
+      </section>
+
+
+      <section class="budget-form-container hidden" id="budgetFormSection">
+        <h2 id="formTitle">Set New Budget</h2>
+        <form id="budgetForm">
+          <input type="hidden" id="budgetId" />
+          <div class="form-row">
+            <div>
+              <label for="budgetCategory">Category</label>
+              <select id="budgetCategory" required>
+                <option value="">Select category</option>
+                <option value="Food">Food</option>
+                <option value="Transport">Transport</option>
+                <option value="Entertainment">Entertainment</option>
+                <option value="Shopping">Shopping</option>
+                <option value="Utilities">Utilities</option>
+                <option value="Health">Health</option>
+                <option value="Education">Education</option>
+                <option value="Subscriptions">Subscriptions</option>
+                <option value="Coffee">Coffee</option>
+                <option value="Groceries">Groceries</option>
+              </select>
+            </div>
+            <div>
+              <label for="budgetLimit">Monthly Limit ($)</label>
+              <input
+                type="number"
+                id="budgetLimit"
+                step="0.01"
+                min="1"
+                placeholder="0.00"
+                required
+              />
+            </div>
+            <div>
+              <label for="budgetMonth">Month</label>
+              <input type="month" id="budgetMonth" required />
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="primary" id="submitBtn">
+              Set Budget
+            </button>
+            <button type="button" class="secondary" id="cancelBtn">
+              Cancel
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <section class="summary-section" id="summarySection">
+        <h2>Monthly Summary</h2>
+        <div class="summary-stats" id="summaryStats">
+
+        </div>
+      </section>
+
+
+      <section>
+        <h2>Budget Progress</h2>
+        <div class="budget-cards" id="budgetCards">
+
+        </div>
+        <div class="no-data hidden" id="noDataMessage">
+          No budgets set yet. Create your first budget above!
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="/js/budget.js"></script>
+  </body>
+</html>
