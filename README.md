@@ -12,10 +12,15 @@ BudgetLens is a personal budget tracking application that helps users log expens
 Most people don't realize how much they spend on small purchases until it's too late. BudgetLens solves this by providing instant visual feedback through charts and progress bars, helping students manage tight budgets and families identify spending leaks.
 
 ## Screenshot
-![BudgetLens Dashboard](screenshot.png)
+![BudgetLens Dashboard](docs/budget.png)
+
+![Expenses](docs/expenses.png)
+
+![Budget](docs/budget.png)
+
 
 ## Design Document
-[Link to Design Document](DESIGN_DOC_URL)
+[Link to Design Document](docs/Design%20document%20Project%202%20Budget%20Lens.pdf)
 
 ## Demo Video
 [Link to Demo Video](VIDEO_URL)
