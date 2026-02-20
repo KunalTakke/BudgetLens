@@ -1,20 +1,53 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BudgetLens🔎</title>
-</head>
-<body>
-    <header>
-        <nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BudgetLens - Dashboard</title>
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/dashboard.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="/" class="logo">Budget<span>Lens</span></a>
+      <a href="/" class="active">Dashboard</a>
+      <a href="/expenses.html">Expenses</a>
+      <a href="/budgets.html">Budgets</a>
+    </nav>
 
-        </nav>
-    </header>
     <main>
-        <h1>BudgetLens🔎</h1>
+      <section class="dashboard-header">
+        <h1>Dashboard</h1>
+        <p>Your financial overview at a glance</p>
+      </section>
+
+      <section class="stats-grid" id="statsGrid">
+        <!-- Rendered by JS -->
+      </section>
+
+      <section class="dashboard-grid">
+        <div class="chart-container">
+          <h2>Spending by Category</h2>
+          <canvas id="categoryChart"></canvas>
+        </div>
+
+        <div class="recent-list">
+          <h2>Recent Expenses</h2>
+          <div id="recentExpenses">
+            <!--  JS for Expenses -->
+          </div>
+        </div>
+      </section>
+
+      <section class="budget-overview card">
+        <h2>Budget Status</h2>
+        <div id="budgetBars">
+          <!--  JS for Budgets  -->
+        </div>
+      </section>
     </main>
 
-    <!-- Scripts -->
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+    <script type="module" src="/js/dashboard.js"></script>
+  </body>
 </html>

@@ -1,40 +1,34 @@
-import express from "express"
-import { error } from "node:console";
+import express from "express";
+import { fileURLToPath } from "url";
+import { dirname, join } from "path";
+import { connectDB } from "./db/connection.js";
+import expenseRoutes from "./routes/expenses.js";
+import budgetRoutes from "./routes/budget.js";
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
-const app = express()
+const app = express();
 const PORT = process.env.PORT || 3000;
 
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 
-// routes
-app.get('/',(req,res)=>{
-    res.send("BudgetLens is running");
-})
+app.use(express.static(join(__dirname, "..", "frontend")));
 
-app.post("/expenses", (req, res) => {
 
-  const expense = req.body;
+app.use("/api/expenses", expenseRoutes);
+app.use("/api/budgets", budgetRoutes);
 
-  console.log(expense);
 
-  res.json({
-    message: "Expense received",
-    data: expense
+async function startServer() {
+  await connectDB();
+
+  app.listen(PORT, () => {
+    console.log(`BudgetLens server running at http://localhost:${PORT}`);
   });
-
-});
-
-app.get("/expenses",(req,res)=>{
-    res.json({data: "lol"})
-})
-
-// listen to port
-try{
-    app.listen(PORT,()=>{
-    console.log(`App listening on port http://localhost:${PORT}`)
-});
-} catch (error) {
-    console.log(`Cannot listen to server ${error.message}`)
 }
+
+startServer();

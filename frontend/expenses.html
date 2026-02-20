@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BudgetLens - Expenses</title>
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/expenses.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="/" class="logo">Budget<span>Lens</span></a>
+      <a href="/">Dashboard</a>
+      <a href="/expenses.html" class="active">Expenses</a>
+      <a href="/budgets.html">Budgets</a>
+    </nav>
+
+    <main>
+      <section class="expenses-header">
+        <h1>Expenses</h1>
+        <button class="primary" id="toggleFormBtn">+ Add Expense</button>
+      </section>
+
+     
+      <section class="expense-form-container hidden" id="expenseFormSection">
+        <h2 id="formTitle">Add New Expense</h2>
+        <form id="expenseForm">
+          <input type="hidden" id="expenseId" />
+          <div class="form-row">
+            <div>
+              <label for="amount">Amount ($)</label>
+              <input
+                type="number"
+                id="amount"
+                step="0.01"
+                min="0.01"
+                placeholder="0.00"
+                required
+              />
+            </div>
+            <div>
+              <label for="category">Category</label>
+              <select id="category" required>
+                <option value="">Select category</option>
+                <option value="Food">Food</option>
+                <option value="Transport">Transport</option>
+                <option value="Entertainment">Entertainment</option>
+                <option value="Shopping">Shopping</option>
+                <option value="Utilities">Utilities</option>
+                <option value="Health">Health</option>
+                <option value="Education">Education</option>
+                <option value="Subscriptions">Subscriptions</option>
+                <option value="Coffee">Coffee</option>
+                <option value="Groceries">Groceries</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div>
+              <label for="description">Description</label>
+              <input
+                type="text"
+                id="description"
+                placeholder="What did you spend on?"
+                required
+              />
+            </div>
+            <div>
+              <label for="date">Date</label>
+              <input type="date" id="date" required />
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="primary" id="submitBtn">
+              Add Expense
+            </button>
+            <button type="button" class="secondary" id="cancelBtn">
+              Cancel
+            </button>
+          </div>
+        </form>
+      </section>
+
+      
+      <section class="filter-bar">
+        <div class="filter-group">
+          <label for="filterCategory">Category</label>
+          <select id="filterCategory">
+            <option value="all">All Categories</option>
+            <option value="Food">Food</option>
+            <option value="Transport">Transport</option>
+            <option value="Entertainment">Entertainment</option>
+            <option value="Shopping">Shopping</option>
+            <option value="Utilities">Utilities</option>
+            <option value="Health">Health</option>
+            <option value="Education">Education</option>
+            <option value="Subscriptions">Subscriptions</option>
+            <option value="Coffee">Coffee</option>
+            <option value="Groceries">Groceries</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="filterStartDate">Start Date</label>
+          <input type="date" id="filterStartDate" />
+        </div>
+        <div class="filter-group">
+          <label for="filterEndDate">End Date</label>
+          <input type="date" id="filterEndDate" />
+        </div>
+        <button class="primary" id="applyFilterBtn">Filter</button>
+        <button class="secondary" id="clearFilterBtn">Clear</button>
+      </section>
+
+    
+      <section class="total-bar" id="totalBar">
+        <span>Total:</span>
+        <span class="total-amount" id="totalAmount">$0.00</span>
+      </section>
+
+     
+      <section class="expense-table-container">
+        <table class="expense-table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Description</th>
+              <th>Category</th>
+              <th>Amount</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="expensesTableBody">
+            <!--loading from JS -->
+          </tbody>
+        </table>
+        <div class="no-data hidden" id="noDataMessage">
+          No expenses found. Add your first expense above!
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="/js/expenses.js"></script>
+  </body>
+</html>

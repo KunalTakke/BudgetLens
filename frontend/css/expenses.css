@@ -1,1 +1,102 @@
-/* Kunal Takke */
+.expenses-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.filter-bar {
+  background-color: #fff;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  display: flex;
+  gap: 15px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.filter-bar .filter-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-bar label {
+  font-size: 0.8rem;
+  margin-bottom: 4px;
+}
+
+.filter-bar input,
+.filter-bar select {
+  width: auto;
+  margin-bottom: 0;
+  min-width: 150px;
+}
+
+.expense-form-container {
+  margin-bottom: 20px;
+}
+
+.expense-form-container h2 {
+  margin-bottom: 10px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.expense-table-container {
+  overflow-x: auto;
+}
+
+.expense-table td .actions {
+  display: flex;
+  gap: 8px;
+}
+
+.expense-table td .actions button {
+  padding: 5px 10px;
+  font-size: 0.8rem;
+}
+
+.total-bar {
+  background-color: #fff;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.total-bar .total-amount {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #e74c3c;
+}
+
+@media (max-width: 768px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .filter-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-bar input,
+  .filter-bar select {
+    min-width: auto;
+  }
+}
