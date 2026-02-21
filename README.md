@@ -25,7 +25,7 @@ Most people don't realize how much they spend on small purchases until it's too 
 [Link to Design Document](docs/Design%20document%20Project%202%20Budget%20Lens.pdf)
 
 ## Demo Video
-[Link to Demo Video](VIDEO_URL)
+[Link to Demo Video](https://northeastern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=daa92cdf-ac2c-457d-96dd-b3f80014cf6f)
 
 ## Features
 - **Expense Tracking**: Add, view, edit, and delete expenses with category, amount, description, and date
