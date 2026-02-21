@@ -1,36 +1,43 @@
 # BudgetLens - Stop Guessing Where Your Money Goes
 
-## Live URL [BudgetLens](https://budgetlens-cc28.onrender.com/) 
+## Live URL [BudgetLens](https://budgetlens-cc28.onrender.com/)
 
 ## Author
+
 **Kunal Sachin Takke** (Expense Management) & **Kunal Juvvala** (Budget Management)
 
 ## Class Link
+
 [CS5610 - Web Development](https://northeastern.instructure.com/courses/245751)
 
 ## Project Objective
+
 BudgetLens is a personal budget tracking application that helps users log expenses quickly, set category budgets, and get real-time visual feedback on their spending. The app provides color-coded progress bars, pie chart visualizations, and budget alerts to make financial awareness effortless.
 
 Most people don't realize how much they spend on small purchases until it's too late. BudgetLens solves this by providing instant visual feedback through charts and progress bars, helping students manage tight budgets and families identify spending leaks.
 
 ## Screenshot
+
 ![BudgetLens Dashboard](docs/budget.png)
 
 ![Expenses](docs/expenses.png)
 
 ![Budget](docs/budget.png)
 
-
 ## Design Document
+
 [Link to Design Document](docs/Design%20document%20Project%202%20Budget%20Lens.pdf)
 
 ## Demo Video
+
 [Link to Demo Video](https://northeastern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=daa92cdf-ac2c-457d-96dd-b3f80014cf6f)
 
-## Presentation 
+## Presentation
+
 [link to presentation](https://docs.google.com/presentation/d/1V_xltp0p7FXjEsnPySzSLEyoVH9IkA6z7ilvXuhpw5w/edit?usp=sharing)
 
 ## Features
+
 - **Expense Tracking**: Add, view, edit, and delete expenses with category, amount, description, and date
 - **Budget Management**: Set monthly budgets per category with spending limits
 - **Dashboard**: Overview with monthly spending totals, pie chart breakdown, recent expenses, and budget progress bars
@@ -39,6 +46,7 @@ Most people don't realize how much they spend on small purchases until it's too 
 - **Monthly Summary**: Track total budget vs. spending across all categories
 
 ## Tech Stack
+
 - **Backend**: Node.js + Express 5
 - **Database**: MongoDB (native driver, no Mongoose)
 - **Frontend**: Vanilla JavaScript (client-side rendering)
@@ -48,18 +56,21 @@ Most people don't realize how much they spend on small purchases until it's too 
 ## Instructions to Build
 
 ### Prerequisites
+
 - Node.js (v18 or higher)
 - MongoDB Atlas account or local MongoDB installation
 
 ### Setup
 
 1. **Clone the repository**
+
    ```bash
    git clone <repo-url>
    cd BudgetLens
    ```
 
 2. **Install dependencies**
+
    ```bash
    npm install
    ```
@@ -67,21 +78,26 @@ Most people don't realize how much they spend on small purchases until it's too 
 3. **Configure environment variables**
 
    Create a `.env` file in the root directory:
+
    ```
    MONGO_URI=mongodb+srv://<username>:<password>@<cluster>.mongodb.net/budgetlens
    PORT=3000
    ```
 
 4. **Seed the database** (adds 1,050+ sample records)
+
    ```bash
    node --env-file=.env backend/seed.js
    ```
 
 5. **Start the server**
+
    ```bash
    node --env-file=.env backend/app.js
    ```
+
    Or using npm:
+
    ```bash
    npm start
    ```
@@ -91,6 +107,7 @@ Most people don't realize how much they spend on small purchases until it's too 
    Navigate to `http://localhost:3000`
 
 ### Usage
+
 - **Dashboard** (`/`): View your financial overview with spending chart, recent expenses, and budget status
 - **Expenses** (`/expenses.html`): Click "+ Add Expense" to log a new expense. Use filters to search by category or date range. Click "Edit" or "Delete" on any row to modify entries.
 - **Budgets** (`/budgets.html`): Click "+ Set Budget" to create a monthly budget for a category. Monitor progress bars — green means on track, yellow means approaching limit (80%+), red means over budget.
@@ -98,4 +115,5 @@ Most people don't realize how much they spend on small purchases until it's too 
 ### Usage Document [USEME.md](USEME.md)
 
 ## License
+
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

@@ -6,6 +6,7 @@
     "mongodb": "^7.1.0"
   },
   "devDependencies": {
-    "eslint": "^10.0.1"
+    "eslint": "^10.0.1",
+    "@eslint/js": "^9.20.0"
   }
 }

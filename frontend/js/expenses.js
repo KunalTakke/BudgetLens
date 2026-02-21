@@ -9,16 +9,13 @@ const tableBody = document.getElementById("expensesTableBody");
 const noDataMessage = document.getElementById("noDataMessage");
 const totalAmount = document.getElementById("totalAmount");
 
-
 const filterCategory = document.getElementById("filterCategory");
 const filterStartDate = document.getElementById("filterStartDate");
 const filterEndDate = document.getElementById("filterEndDate");
 const applyFilterBtn = document.getElementById("applyFilterBtn");
 const clearFilterBtn = document.getElementById("clearFilterBtn");
 
-
 document.getElementById("date").valueAsDate = new Date();
-
 
 toggleFormBtn.addEventListener("click", () => {
   resetForm();
@@ -37,7 +34,6 @@ function resetForm() {
   submitBtn.textContent = "Add Expense";
   document.getElementById("date").valueAsDate = new Date();
 }
-
 
 async function loadExpenses(filters = {}) {
   try {
@@ -99,7 +95,6 @@ function renderExpenses(expenses) {
     .join("");
 }
 
-
 expenseForm.addEventListener("submit", async (e) => {
   e.preventDefault();
 
@@ -114,14 +109,12 @@ expenseForm.addEventListener("submit", async (e) => {
 
   try {
     if (id) {
-
       await fetch(`/api/expenses/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(expenseData),
       });
     } else {
-
       await fetch("/api/expenses", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -136,7 +129,6 @@ expenseForm.addEventListener("submit", async (e) => {
     console.error("Error saving expense:", error);
   }
 });
-
 
 window.editExpense = async function (id) {
   try {
@@ -159,7 +151,6 @@ window.editExpense = async function (id) {
   }
 };
 
-
 window.removeExpense = async function (id) {
   if (!confirm("Are you sure you want to delete this expense?")) return;
 
@@ -170,7 +161,6 @@ window.removeExpense = async function (id) {
     console.error("Error deleting expense:", error);
   }
 };
-
 
 applyFilterBtn.addEventListener("click", () => {
   loadExpenses({
@@ -186,6 +176,5 @@ clearFilterBtn.addEventListener("click", () => {
   filterEndDate.value = "";
   loadExpenses();
 });
-
 
 loadExpenses();

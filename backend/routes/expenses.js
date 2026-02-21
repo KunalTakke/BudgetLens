@@ -11,7 +11,6 @@ import {
 
 const router = Router();
 
-
 router.get("/", async (req, res) => {
   try {
     const { category, startDate, endDate } = req.query;
@@ -33,7 +32,6 @@ router.get("/", async (req, res) => {
   }
 });
 
-
 router.get("/summary", async (req, res) => {
   try {
     const summary = await getExpensesSummary();
@@ -43,7 +41,6 @@ router.get("/summary", async (req, res) => {
     res.status(500).json({ error: "Failed to fetch summary" });
   }
 });
-
 
 router.get("/:id", async (req, res) => {
   try {
@@ -57,7 +54,6 @@ router.get("/:id", async (req, res) => {
     res.status(500).json({ error: "Failed to fetch expense" });
   }
 });
-
 
 router.post("/", async (req, res) => {
   try {
@@ -79,7 +75,6 @@ router.post("/", async (req, res) => {
     res.status(500).json({ error: "Failed to create expense" });
   }
 });
-
 
 router.put("/:id", async (req, res) => {
   try {
@@ -104,7 +99,6 @@ router.put("/:id", async (req, res) => {
     res.status(500).json({ error: "Failed to update expense" });
   }
 });
-
 
 router.delete("/:id", async (req, res) => {
   try {

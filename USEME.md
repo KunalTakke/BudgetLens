@@ -3,34 +3,40 @@
 ## Getting Started
 
 ### Prerequisites
+
 - Node.js (v18 or higher)
 - MongoDB Atlas account (free tier works)
 
 ### Installation
 
 1. Clone the repository
+
    ```
    git clone <repo-url>
    cd BudgetLens
    ```
 
 2. Install dependencies
+
    ```
    npm install
    ```
 
 3. Create a `.env` file in the root folder with your MongoDB connection string
+
    ```
    MONGO_URI=mongodb+srv://<username>:<password>@<cluster>.mongodb.net/budgetlens
    PORT=3000
    ```
 
 4. Seed the database with sample data (1,050+ records)
+
    ```
    node --env-file=.env backend/seed.js
    ```
 
 5. Start the server
+
    ```
    node --env-file=.env backend/app.js
    ```
@@ -141,6 +147,7 @@ The Budgets page is where you set monthly spending limits for each category and 
 **Understanding budget cards:**
 
 Each budget card shows:
+
 - **Category name** and **month** at the top
 - **Spent** — How much you have spent in that category this month
 - **Limit** — The budget limit you set

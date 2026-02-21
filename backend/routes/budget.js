@@ -11,7 +11,7 @@ import {
 const router = Router();
 
 router.get("/", async (req, res) => {
-  try { 
+  try {
     const budgets = await getAllBudgets();
     res.json(budgets);
   } catch (error) {

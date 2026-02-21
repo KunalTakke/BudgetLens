@@ -157,12 +157,10 @@ async function seed() {
     const db = client.db(DB_NAME);
     console.log("Connected to MongoDB for seeding...");
 
-    
     await db.collection("expenses").deleteMany({});
     await db.collection("budgets").deleteMany({});
     console.log("Cleared existing data");
 
-    
     const expenses = [];
     for (let i = 0; i < 1050; i++) {
       const category = pickRandom(categories);
@@ -179,7 +177,6 @@ async function seed() {
     await db.collection("expenses").insertMany(expenses);
     console.log(`Inserted ${expenses.length} expense records`);
 
-    
     const currentMonth = `${new Date().getFullYear()}-${String(new Date().getMonth() + 1).padStart(2, "0")}`;
     const budgets = categories.map((category) => ({
       category: category,
@@ -191,7 +188,6 @@ async function seed() {
     await db.collection("budgets").insertMany(budgets);
     console.log(`Inserted ${budgets.length} budget records`);
 
-  
     const expenseCount = await db.collection("expenses").countDocuments();
     const budgetCount = await db.collection("budgets").countDocuments();
     console.log(`\nTotal expenses in DB: ${expenseCount}`);

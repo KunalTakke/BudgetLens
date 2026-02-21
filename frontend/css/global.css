@@ -60,7 +60,6 @@ h2 {
   color: #2c3e50;
 }
 
-
 button {
   cursor: pointer;
   padding: 8px 16px;
@@ -97,7 +96,6 @@ button.secondary:hover {
   background-color: #7f8c8d;
 }
 
-
 form {
   background-color: #fff;
   padding: 20px;
@@ -129,7 +127,6 @@ select:focus {
   border-color: #3498db;
 }
 
-
 .card {
   background-color: #fff;
   padding: 20px;
@@ -137,7 +134,6 @@ select:focus {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: 15px;
 }
-
 
 .badge {
   display: inline-block;
@@ -148,7 +144,6 @@ select:focus {
   color: #fff;
   background-color: #3498db;
 }
-
 
 table {
   width: 100%;
@@ -178,7 +173,6 @@ tbody tr:hover {
   background-color: #eef2f7;
 }
 
-
 .text-center {
   text-align: center;
 }
@@ -186,7 +180,6 @@ tbody tr:hover {
 .hidden {
   display: none;
 }
-
 
 .progress-bar {
   height: 20px;

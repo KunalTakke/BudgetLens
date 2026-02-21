@@ -11,17 +11,13 @@ const __dirname = dirname(__filename);
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-
 app.use(express.static(join(__dirname, "..", "frontend")));
-
 
 app.use("/api/expenses", expenseRoutes);
 app.use("/api/budgets", budgetRoutes);
-
 
 async function startServer() {
   await connectDB();
