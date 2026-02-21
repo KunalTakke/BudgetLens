@@ -4,7 +4,6 @@ const budgetBarsDiv = document.getElementById("budgetBars");
 
 let categoryChartInstance = null;
 
-
 const categoryColors = {
   Food: "#e74c3c",
   Transport: "#3498db",
@@ -100,8 +99,7 @@ function renderCategoryChart(categoryTotals) {
 
 function renderRecentExpenses(expenses) {
   if (expenses.length === 0) {
-    recentExpensesDiv.innerHTML =
-      '<p class="no-data">No recent expenses</p>';
+    recentExpensesDiv.innerHTML = '<p class="no-data">No recent expenses</p>';
     return;
   }
 
@@ -122,8 +120,7 @@ function renderRecentExpenses(expenses) {
 
 function renderBudgetBars(budgets) {
   if (budgets.length === 0) {
-    budgetBarsDiv.innerHTML =
-      '<p class="no-data">No budgets set yet</p>';
+    budgetBarsDiv.innerHTML = '<p class="no-data">No budgets set yet</p>';
     return;
   }
 
@@ -143,6 +140,5 @@ function renderBudgetBars(budgets) {
     )
     .join("");
 }
-
 
 loadDashboard();
