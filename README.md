@@ -27,6 +27,9 @@ Most people don't realize how much they spend on small purchases until it's too 
 ## Demo Video
 [Link to Demo Video](https://northeastern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=daa92cdf-ac2c-457d-96dd-b3f80014cf6f)
 
+## Presentation 
+[link to presentation](https://docs.google.com/presentation/d/1V_xltp0p7FXjEsnPySzSLEyoVH9IkA6z7ilvXuhpw5w/edit?usp=sharing)
+
 ## Features
 - **Expense Tracking**: Add, view, edit, and delete expenses with category, amount, description, and date
 - **Budget Management**: Set monthly budgets per category with spending limits
