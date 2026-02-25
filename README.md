@@ -110,7 +110,7 @@ Most people don't realize how much they spend on small purchases until it's too 
 
 - **Dashboard** (`/`): View your financial overview with spending chart, recent expenses, and budget status
 - **Expenses** (`/expenses.html`): Click "+ Add Expense" to log a new expense. Use filters to search by category or date range. Click "Edit" or "Delete" on any row to modify entries.
-- **Budgets** (`/budgets.html`): Click "+ Set Budget" to create a monthly budget for a category. Monitor progress bars — green means on track, yellow means approaching limit (80%+), red means over budget.
+- **Budgets** (`/budgets.html`): Click "+ Set Budget" to create a monthly budget for a category. Monitor progress bars — green means on track, yellow means approaching limit (80%+), red means over budget
 
 ### Usage Document [USEME.md](USEME.md)
 
